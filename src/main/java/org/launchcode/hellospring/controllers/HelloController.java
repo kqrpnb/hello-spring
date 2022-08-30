@@ -3,6 +3,8 @@ package org.launchcode.hellospring.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @Controller
 @ResponseBody //Used when we aren't using templates to provide basic text response
 @RequestMapping("hello")
@@ -42,11 +44,17 @@ public class HelloController {
         return "<html>" +
                 "<body>" +
                 "<form action='hello' method='post'>" + //submit a request to /hello
-                "<input type='text' name='name'>" +
+                "<input type='text' name='coder'>" +
                 "<input type='submit' value='Greet me!'>" +
                 "</form>" +
                 "</body>" +
                 "</html>";
     }
 
+    //controller-exercises 10.5
+    public static void createMessage(String name, String language) {
+        
+//        ArrayList<String> greetings = new ArrayList<>();
+//        greetings.add("");
+    }
 }
